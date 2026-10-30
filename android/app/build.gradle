@@ -78,6 +78,11 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.myapp"
+    externalNativeBuild {
+        cmake {
+            path file("src/main/jni/CMakeLists.txt")
+        }
+    }
     defaultConfig {
         applicationId "com.myapp"
         minSdkVersion rootProject.ext.minSdkVersion

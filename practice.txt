@@ -1,0 +1,70 @@
+// const isDarkMode = useColorScheme() === 'dark';
+  // const [cart,  setCart ] = useState([])
+  // console.log('cart===========>',cart)
+
+  // const products = [
+  //   {
+  //     id: 1,
+  //     background_color: '#FF1E3D',
+  //     mainHeading: "Women Blouse",
+  //     paraText: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+  //     img: require("./Image/Blouse.png"),
+  //     textColor: '#F84F59',
+  //     price: 125
+  //   },
+  //   {
+  //     id: 2,
+  //     background_color: '#7A4FFC',
+  //     mainHeading: "Children Shirt",
+  //     paraText: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+  //     img: require("./Image/child_shirt.jpg"),
+  //     textColor: '#7D5BFC',
+  //     price: 130
+  //   },
+  //   {
+  //     id: 3,
+  //     background_color: '#2A98F8',
+  //     mainHeading: "Women Blouse",
+  //     paraText: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
+  //     img: require("./Image/Blouse.png"),
+  //     textColor: '#2B98F8',
+  //     price: 135
+  //   }
+  // ]
+
+  // const addToCart = (data) => {
+  //   // return console.log(data)
+  //   if(cart.some(item=>item?.mainHeading == data?.mainHeading)){
+  //     console.log(cart)
+  //     ToastAndroid.show('already added' , ToastAndroid.SHORT)
+  //   }
+  //   else{
+  //     setCart(preProduct => [... preProduct, data])
+  //   }
+  // }
+  // const deleteItem = () => {
+  //   setCart(cart.filter(item => item.mainHeading !== "Women Blouse" || item.mainHeading !== "Children Shirt"))
+  // }
+
+
+
+  <SafeAreaProvider>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <ScrollView
+        contentContainerStyle={{
+          paddingBottom: 50,
+        }}
+      >
+        {products.map((item, index) => (
+        <Carts key={index}
+        background_color = {item.background_color} 
+        mainHeading = {item.mainHeading}
+        paraText = {item.paraText}
+        img = {item.img}
+        price = {item.price}
+        addCart= {()=>{addToCart(item)}}
+        deleteCartItem = {() => {deleteItem()}}
+        />
+      ))}
+    </ScrollView>
+    </SafeAreaProvider>
