@@ -54,9 +54,7 @@ const LoginPage = () => {
           </View>
       </View>
     </View>
-    <View style={{flex: 1, backgroundColor: 'red'}}>
-      {isLoggedIn && <Todo />}
-    </View>
+    
     </>
   )
 }

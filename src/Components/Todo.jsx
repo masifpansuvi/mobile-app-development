@@ -27,7 +27,7 @@ import { addTodo, removeTodo, toggleTodo } from '../redux/slice/todosSlice'
             style={{ borderRadius: 4, borderColor: 'transparent', backgroundColor: '#bbbbbb', padding: 10, marginBottom: 10}}
             />
             <TouchableOpacity onPress={handleTodo} style={{}}><Text>Add Todo</Text></TouchableOpacity>
-            {/* <ScrollView>
+            <ScrollView>
                 {todos.map((item) => (
                     <View
                     key={item.id}
@@ -43,7 +43,7 @@ import { addTodo, removeTodo, toggleTodo } from '../redux/slice/todosSlice'
                     <Button title="Delete" onPress={() => dispatch(removeTodo(item.id))} />
                     </View>
                 ))}
-            </ScrollView> */}
+            </ScrollView>
         </View>
     )
     }
