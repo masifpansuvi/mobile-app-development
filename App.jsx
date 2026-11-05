@@ -5,7 +5,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import { store, persistor } from './src/redux/store/store.js'
-import Shop from './src/Components/Shop.jsx';
+import ExpenseTracker from './src/Components/ExpenseTracker.jsx'
 
 function App() {
 const isDarkMode = useColorScheme() === 'dark';
@@ -15,9 +15,9 @@ return (
     <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <Provider store={store}>
         <PersistGate persistor={persistor}>
-          <Shop />
-        </PersistGate>
-      </Provider>
+          <ExpenseTracker />  
+        </PersistGate>  
+      </Provider>   
   </SafeAreaProvider>
 );
 }
